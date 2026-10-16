@@ -107,14 +107,14 @@ Official schedule source: {SCHEDULE_SOURCE_URL}
         span.set_attribute("event.schedule.source", SCHEDULE_SOURCE_URL)
         try:
             response: httpx.Response | None = None
-            for attempt in range(3):
+            for attempt in range(4):
                 response = httpx.post(
                     endpoint,
                     json=request_payload,
                     headers={"Content-Type": "application/json", "API-Key": api_key},
                     timeout=60.0,
                 )
-                if response.status_code != 429 or attempt == 2:
+                if response.status_code != 429 or attempt == 3:
                     response.raise_for_status()
                     break
                 try:

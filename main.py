@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import time
 from typing import Any
 from urllib.parse import quote
 
@@ -105,17 +106,44 @@ Official schedule source: {SCHEDULE_SOURCE_URL}
         span.set_attribute("gen_ai.input.messages", _redacted_messages([{"role": "user", "content": question}]))
         span.set_attribute("event.schedule.source", SCHEDULE_SOURCE_URL)
         try:
-            response = httpx.post(
-                endpoint,
-                json=request_payload,
-                headers={"Content-Type": "application/json", "API-Key": api_key},
-                timeout=60.0,
-            )
-            response.raise_for_status()
+            response: httpx.Response | None = None
+            for attempt in range(3):
+                response = httpx.post(
+                    endpoint,
+                    json=request_payload,
+                    headers={"Content-Type": "application/json", "API-Key": api_key},
+                    timeout=60.0,
+                )
+                if response.status_code != 429 or attempt == 2:
+                    response.raise_for_status()
+                    break
+                try:
+                    retry_after = float(response.headers.get("Retry-After", ""))
+                except ValueError:
+                    retry_after = float(attempt + 1)
+                retry_after = min(8.0, max(1.0, retry_after))
+                span.add_event(
+                    "gen_ai.rate_limit_retry",
+                    {"retry_count": attempt + 1, "retry_delay_seconds": retry_after},
+                )
+                time.sleep(retry_after)
+            if response is None:
+                raise ValueError("Gemini did not return a response")
             body = response.json()
             if not isinstance(body, dict):
                 raise ValueError("Gemini returned an invalid response")
             answer = _read_visible_gemini_text(body)
+        except httpx.HTTPStatusError as exc:
+            is_rate_limited = exc.response.status_code == 429
+            span.record_exception(exc)
+            span.set_status(Status(StatusCode.ERROR, "Gemini rate limited" if is_rate_limited else "Gemini request failed"))
+            span.set_attribute("error.type", type(exc).__name__)
+            raise HTTPException(
+                status_code=503 if is_rate_limited else 502,
+                detail="Managed Gemini is temporarily rate-limited; please retry shortly."
+                if is_rate_limited
+                else "Managed Gemini request failed",
+            ) from exc
         except (httpx.HTTPError, TypeError, ValueError, KeyError, IndexError) as exc:
             span.record_exception(exc)
             span.set_status(Status(StatusCode.ERROR, "Gemini request failed"))

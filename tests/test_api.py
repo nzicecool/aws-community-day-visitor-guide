@@ -12,7 +12,7 @@ def test_chat_returns_schedule_scoped_response(monkeypatch):
         "sessions": [],
     }
     monkeypatch.setattr(main.catalog, "current", lambda: snapshot)
-    monkeypatch.setattr(main.catalog, "context_for_model", lambda _: "SCHEDULE")
+    monkeypatch.setattr(main.catalog, "context_for_model", lambda *_: "SCHEDULE")
     monkeypatch.setattr(main.speakers, "context_for_model", lambda _: "SPEAKERS")
     monkeypatch.setattr(main, "generate_response", lambda *_: ("Cloud Corner at 10:30.", 23, 11))
 

@@ -192,7 +192,7 @@ def chat(request: ChatRequest) -> dict[str, Any]:
             schedule = catalog.current()
             answer, input_tokens, output_tokens = generate_response(
                 request.message,
-                catalog.context_for_model(schedule),
+                catalog.context_for_model(schedule, request.message),
                 speakers.context_for_model(request.message),
             )
         except HTTPException as exc:

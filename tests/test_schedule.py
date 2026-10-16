@@ -1,4 +1,4 @@
-from schedule import build_snapshot, parse_schedule_html
+from schedule import ScheduleCatalog, build_snapshot, parse_schedule_html
 
 
 SCHEDULE_HTML = """
@@ -34,3 +34,27 @@ def test_build_snapshot_sets_event_metadata():
     assert snapshot["timezone"] == "Australia/Brisbane"
     assert snapshot["source"].endswith("/schedule/index.html")
     assert len(snapshot["sessions"]) == 12
+
+
+def test_context_includes_details_only_for_matching_sessions():
+    schedule = {
+        "eventDate": "2026-10-16",
+        "timezone": "Australia/Brisbane",
+        "sessions": [
+            {
+                "time": "10:30 - 11:00", "title": "Operating the Agent", "room": "Cloud Corner",
+                "track": "Cloud Corner", "type": "session", "speakers": [{"name": "Sagar Utekar", "eventHeadline": "SRE"}],
+                "description": "Relevant SRE practices for autonomous AI in production.",
+            },
+            {
+                "time": "11:00 - 11:30", "title": "Unrelated Session", "room": "The Edge Zone",
+                "track": "The Edge Zone", "type": "session", "speakers": [],
+                "description": "This long description should not be included as a detailed relevant entry.",
+            },
+        ],
+    }
+
+    context = ScheduleCatalog.context_for_model(schedule, "Where is Sagar Utekar presenting?")
+
+    assert "Relevant SRE practices" in context
+    assert "This long description should not" not in context

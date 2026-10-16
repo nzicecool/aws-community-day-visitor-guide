@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import time
 from datetime import datetime
 from pathlib import Path
@@ -129,16 +130,51 @@ class ScheduleCatalog:
         return self._schedule
 
     @staticmethod
-    def context_for_model(schedule: dict[str, Any]) -> str:
+    def context_for_model(schedule: dict[str, Any], question: str) -> str:
+        """Provide every item concisely, with full details only for relevant sessions."""
         now = datetime.now(ZoneInfo(_TIMEZONE)).strftime("%Y-%m-%d %H:%M %Z")
-        rows: list[str] = []
-        for session in schedule["sessions"]:
-            speakers = "; ".join(
+        ignored_terms = {
+            "about", "after", "also", "and", "are", "at", "can", "day", "find", "for",
+            "from", "give", "happening", "help", "how", "is", "me", "my", "on", "or",
+            "tell", "the", "there", "this", "to", "what", "when", "where", "which", "who",
+            "with", "would", "you",
+        }
+        terms = {
+            term for term in re.findall(r"[a-z0-9]{3,}", question.lower())
+            if term not in ignored_terms
+        }
+        requested_times = set(re.findall(r"\b\d{1,2}:\d{2}\b", question))
+        concise_rows: list[str] = []
+        ranked: list[tuple[int, int, dict[str, Any]]] = []
+        for index, session in enumerate(schedule["sessions"]):
+            speaker_names = "; ".join(
+                item["name"] for item in session.get("speakers", [])
+            ) or "No speaker published"
+            concise_rows.append(
+                f"{session['time']} | {session['title']} | {session['room']} | "
+                f"{session.get('track') or 'Event programme'} | Speakers: {speaker_names}"
+            )
+            searchable = " ".join(
+                [
+                    session.get("title", ""),
+                    session.get("room", ""),
+                    session.get("track", ""),
+                    session.get("description", ""),
+                    speaker_names,
+                ]
+            ).lower()
+            score = sum(searchable.count(term) for term in terms)
+            score += 20 * sum(time_text in session.get("time", "") for time_text in requested_times)
+            if score:
+                ranked.append((score, -index, session))
+
+        detailed_rows: list[str] = []
+        for _, _, session in sorted(ranked, reverse=True)[:8]:
+            speaker_details = "; ".join(
                 f"{item['name']} ({item['eventHeadline']})".strip()
                 for item in session.get("speakers", [])
             ) or "No speaker published"
-            description = session.get("description", "")[:550]
-            rows.append(
+            detailed_rows.append(
                 " | ".join(
                     [
                         f"Title: {session['title']}",
@@ -146,8 +182,8 @@ class ScheduleCatalog:
                         f"Room: {session['room']}",
                         f"Track: {session.get('track') or 'Event programme'}",
                         f"Type: {session.get('type', 'session')}",
-                        f"Speakers: {speakers}",
-                        f"Description: {description or 'No description published'}",
+                        f"Speakers: {speaker_details}",
+                        f"Description: {session.get('description', '')[:350] or 'No description published'}",
                     ]
                 )
             )
@@ -155,6 +191,6 @@ class ScheduleCatalog:
             "OFFICIAL SCHEDULE\n"
             f"Event date: {schedule['eventDate']} ({schedule['timezone']}).\n"
             f"Current Brisbane time: {now}.\n"
-            "Entries:\n- "
-            + "\n- ".join(rows)
+            "Programme at a glance:\n- " + "\n- ".join(concise_rows)
+            + ("\nRelevant detailed entries:\n- " + "\n- ".join(detailed_rows) if detailed_rows else "")
         )

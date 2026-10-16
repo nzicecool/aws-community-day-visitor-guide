@@ -1,0 +1,22 @@
+[
+  {
+    "name": "PORT",
+    "value": "8000"
+  },
+  {
+    "name": "LLM_PROVIDER_PROTOCOL",
+    "value": "gemini"
+  },
+  {
+    "name": "LLM_PROVIDER_AUTH_STYLE",
+    "value": "api-key"
+  },
+  {
+    "name": "LLM_MODEL",
+    "value": "gemini-3-flash-preview"
+  },
+  {
+    "name": "SCHEDULE_REFRESH_SECONDS",
+    "value": "900"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "source": "LinkedIn public profile search",
+  "generatedAt": "2026-10-16T06:21:37.312Z",
+  "matchingRule": "Exact speaker name plus event-headline overlap; ambiguous matches excluded.",
+  "profiles": [
+    {
+      "name": "Dmytro Sirant",
+      "headline": "Helping businesses thrive with AWS | AWS Community Builder | 15x AWS Certified | Cost Optimisation | High Availability | Disaster Recovery | Security & Compliance | Kubernetes | AWS UG Gold Coast Leader",
+      "profileUrl": "https://www.linkedin.com/in/dmytro-sirant",
+      "retrievedAt": "2026-10-16T06:21:26.033Z",
+      "source": "LinkedIn public profile search",
+      "matchScore": 70
+    }
+  ],
+  "unresolved": [
+    "Aashish Jolly",
+    "Akshat Gupta",
+    "Arshad Zackeriya",
+    "Augusto Dias",
+    "Cathy Weng",
+    "Christina Chen",
+    "Daniel Clement",
+    "Geethika Guruge",
+    "Haofei Feng",
+    "Jahnavi Gurrappadia",
+    "James Corrigan",
+    "John Crook",
+    "Lovee Jain",
+    "Matthew Gillard",
+    "Michael Walmsley",
+    "Mike Chambers",
+    "Muhammad Yuga Nugraha",
+    "Nicole Ramirez",
+    "Orlando Adeyemi",
+    "Sagar Utekar",
+    "Stan Fan",
+    "Tim Wang",
+    "Vanitha Kaliyaperumal",
+    "Yongkang He",
+    "Yuba Raj Panta"
+  ]
+}

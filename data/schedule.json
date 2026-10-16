@@ -1,0 +1,433 @@
+{
+  "source": "https://awscommunitydayaus.com/schedule/index.html",
+  "eventDate": "2026-10-16",
+  "timezone": "Australia/Brisbane",
+  "retrievedAt": "2026-10-16T06:21:11.199238+00:00",
+  "sessions": [
+    {
+      "id": "session-ee552136-d66e-4429-ac89-306d01fbb4b3",
+      "type": "break",
+      "track": "",
+      "time": "08:30 - 09:00",
+      "room": "Builder’s Mainstage (Auditorium)",
+      "title": "Registration",
+      "speakers": [],
+      "description": ""
+    },
+    {
+      "id": "session-75317be8-a356-4252-81d8-3e1d72a2ba63",
+      "type": "break",
+      "track": "",
+      "time": "09:00 - 09:20",
+      "room": "Builder’s Mainstage (Auditorium)",
+      "title": "Welcome Address",
+      "speakers": [],
+      "description": ""
+    },
+    {
+      "id": "session-1338420",
+      "type": "keynote",
+      "track": "Builder’s Mainstage",
+      "time": "09:20 - 10:00",
+      "room": "Builder’s Mainstage (Auditorium)",
+      "title": "Opening Keynote",
+      "speakers": [
+        {
+          "name": "Mike Chambers",
+          "eventHeadline": "Senior AI Specialist DA, @ Amazon | Ex ML Hero | Generative AI, Cloud Computing"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "id": "session-11b454ff-1bd2-4656-9e32-d129e66d8bf4",
+      "type": "break",
+      "track": "",
+      "time": "10:00 - 10:30",
+      "room": "Builder’s Mainstage (Auditorium)",
+      "title": "Morning Tea",
+      "speakers": [],
+      "description": ""
+    },
+    {
+      "id": "session-1263941",
+      "type": "session",
+      "track": "The Edge Zone",
+      "time": "10:30 - 11:00",
+      "room": "The Edge Zone (Boulevard 1)",
+      "title": "A Very Brief History of AI: How AWS Fueled the Evolution of Language Models",
+      "speakers": [
+        {
+          "name": "John Crook",
+          "eventHeadline": "CEO Rule30"
+        }
+      ],
+      "description": "To understand the future of AI, you have to understand its past. Join us for a whirlwind tour of AI, tracing the journey from early breakthroughs to the massive frontier models of today. While the headlines focus on the models themselves, the real story of AI is a story of algorithms, data, compute, and scale. In this session, we will look under the hood of this revolution to explore how Amazon and AWS quietly built the scaffolding for modern LLMs, touching on everything from the early days of human data loops with Amazon's Mechanical Turk, to the industrialisation of machine learning via SageMaker, and finally to Bedrock and custom silicon powering the future."
+    },
+    {
+      "id": "session-1290358",
+      "type": "session",
+      "track": "Cloud Corner",
+      "time": "10:30 - 11:00",
+      "room": "Cloud Corner (Boulevard 2)",
+      "title": "Operating the Agent: SRE Best Practices for Autonomous AI in Production",
+      "speakers": [
+        {
+          "name": "Sagar Utekar",
+          "eventHeadline": "SRE@Omnissa | Kubestronaut | CNCF Ambassador | Docker Captain"
+        }
+      ],
+      "description": "Everyone at this conference is building agents. Almost nobody is operating them. There are no readiness probes, no error budgets, and no runbooks. When your agent starts looping at 3 AM and burning through tokens, there is absolutely nothing between it and a massive surprise bill except your sleep schedule. I put Amazon Bedrock agents in production for incident triage. During month one, they caused three distinct incidents they were supposed to be fixing. This did not happen because the model itself was bad. It happened because I had zero visibility into what it was actually doing and no safety valve to stop it when things went wrong. So I built the control plane instead. This session walks through the framework we implemented to regain control. We started with four essential Service Level Indicators: decision latency at p99 via Strands tracing, tool success rate to track the percentage of valid results, guardrail trigger rates from Bedrock Guardrails, and cost per invocation tracked as a clear distribution. We then backed this up with a simple circuit breaker. A CloudWatch alarm monitors the tool success rate, routes through EventBridge, and triggers a Lambda function to immediately disable the agent endpoint. It took a single afternoon to build and has already saved us twice. Finally, we established a clear runbook: when an agent alert fires, check the tool success rate first. If it drops below 80%, the upstream tool is broken. You do not restart the agent or blame the model. You fix the tool. Over six months of running this operational framework, we achieved zero agent-caused incidents. Better yet, 73% of P3 and P4 incidents are now auto-triaged without human involvement, bringing the cost down to just $0.41 per triage. Tools like AgentCore Online Evaluation can tell you that an agent is degrading, but this control plane tells you exactly when and why it is happening, and stops the damage before anyone wakes up."
+    },
+    {
+      "id": "session-1305870",
+      "type": "session",
+      "track": "The Edge Zone",
+      "time": "11:00 - 11:30",
+      "room": "The Edge Zone (Boulevard 1)",
+      "title": "One Engineer, One Agent: Re-architecting a Big Data IoT Platform with Kiro",
+      "speakers": [
+        {
+          "name": "Dmytro Sirant",
+          "eventHeadline": "AWS Community Builder, AWS User Group Leader, Founder of Perun Engineering"
+        }
+      ],
+      "description": "A single DevOps engineer, an AI agent, and a big data / IoT platform that needed re-architecting from the ground up. This talk is a first-hand account of doing that work with Kiro on AWS - EKS, S3, ElastiCache and friends - and an honest look at what it cost. You'll see where AI genuinely collapsed weeks into days, and where it confidently failed. Expect concrete before/after diagrams, the review practices that caught the bad output, and the moments where slowing down mattered more than shipping."
+    },
+    {
+      "id": "session-1310054",
+      "type": "session",
+      "track": "Cloud Corner",
+      "time": "11:00 - 11:30",
+      "room": "Cloud Corner (Boulevard 2)",
+      "title": "From Plumbing to Production: Real-World Lessons with Bedrock AgentCore",
+      "speakers": [
+        {
+          "name": "Lovee Jain",
+          "eventHeadline": "Senior Software Engineer, AWS Community Builder, Google Developer Expert, WTM Ambassador, GDG Melbourne Organiser"
+        }
+      ],
+      "description": "Building a prototype agent feels like simple script logic, until you realise you’re actually orchestrating an autonomous, non-deterministic distributed system. In this 10-minute lightning talk, we look beyond the \"happy path\" of the new Amazon Bedrock AgentCore workshop. We’ll dissect how AgentCore handles the critical baseline plumbing (MCP gateways, ephemeral runtimes, identity brokers, and memory abstractions) and where traditional distributed systems engineering must take over: handling tool timeouts, idempotency, loop circuit breakers, and state consistency. You’ll walk away with a clear architectural lens on what AWS manages for you versus the real-world operational patterns you still need to build to survive in production."
+    },
+    {
+      "id": "session-1300493",
+      "type": "session",
+      "track": "The Edge Zone",
+      "time": "11:30 - 12:00",
+      "room": "The Edge Zone (Boulevard 1)",
+      "title": "C3: The AI Agent That Survived Audit Season (So You Don’t)",
+      "speakers": [
+        {
+          "name": "Christina Chen",
+          "eventHeadline": "Senior Cloud Consultant at Mantel"
+        },
+        {
+          "name": "Cathy Weng",
+          "eventHeadline": "Senior Cloud Consultant at Mantel"
+        },
+        {
+          "name": "Nicole Ramirez",
+          "eventHeadline": "Lead Machine Learning Engineer at Mantel"
+        }
+      ],
+      "description": "Compliance work isn’t a once-a-year event—it’s something teams live with continuously. It often means chasing evidence across accounts, interpreting policies, and trying to keep up with constant change. In this session, we introduce C3, an AI agent built on AWS that helps automate this ongoing effort. It reads compliance policies, evaluates cloud environments across multiple accounts, and generates audit-ready reports in minutes. We’ll walk through how it’s built, including policy interpretation and evaluation pipelines, and discuss where it struggles in practice. You’ll leave with practical patterns for turning compliance into a continuous, automated workflow that developers can work with."
+    },
+    {
+      "id": "session-1302970",
+      "type": "session",
+      "track": "Cloud Corner",
+      "time": "11:30 - 12:00",
+      "room": "Cloud Corner (Boulevard 2)",
+      "title": "Shift Left or Get Left Behind: Continuous Security Testing with AWS Continuum",
+      "speakers": [
+        {
+          "name": "Tim Wang",
+          "eventHeadline": "Cloud Solution Architect | AWS Ambassador | PwC Australia"
+        },
+        {
+          "name": "Akshat Gupta",
+          "eventHeadline": "Cloud and AI Engineer | PwC Australia"
+        }
+      ],
+      "description": "AI-assisted vulnerability discovery is accelerating faster than most teams can keep up. CVE disclosure rates have jumped dramatically, and attackers are finding bugs in codebases that went unnoticed for over a decade. Yet many organisations still treat security validation as a manual, quarterly exercise that happens long after code reaches production. In this session, we explore how to shift security discovery left by embedding continuous penetration-like testing into your CI/CD pipeline. We cover a sample architecture and how it can be centrally managed at the same time adopted by your application teams. We'll also show a live demo on how practically this would work. Whether you are a developer, DevOps engineer, or AppSec practitioner, you will walk away with a practical blueprint for making security validation as routine as running your unit tests."
+    },
+    {
+      "id": "session-eaedcd7a-2441-44d6-8faa-27d68730d93c",
+      "type": "break",
+      "track": "",
+      "time": "12:00 - 13:00",
+      "room": "Builder’s Mainstage (Auditorium)",
+      "title": "Lunch & Networking",
+      "speakers": [],
+      "description": ""
+    },
+    {
+      "id": "session-1303000",
+      "type": "session",
+      "track": "The Edge Zone",
+      "time": "13:00 - 13:30",
+      "room": "The Edge Zone (Boulevard 1)",
+      "title": "AWS Lambda MicroVMs: What They're Good For, and What They Aren't",
+      "speakers": [
+        {
+          "name": "Muhammad Yuga Nugraha",
+          "eventHeadline": "Agoda, Senior Security Engineer - Cloud security for what matters most"
+        }
+      ],
+      "description": "In June 2026, AWS launched Lambda MicroVMs, a new compute primitive that gives each user or session its own dedicated Firecracker VM. Firecracker isn't new, it has powered Lambda since 2018. What's new is Instead of a stateless function on an environment you don't control, you get a VM you define with a Dockerfile, keep alive across a session, and suspend and resume at will. This talk walk through how Lambda MicroVMs actually work: you hand AWS a Dockerfile, it builds and snapshots the VM, and you launch from that snapshot. Each VM gets its own HTTPS endpoint. We will walk through what people have actually built with it since launch and which problems it genuinely solves. Then we will turn to the security side and explore how the service could be abused by an attacker, and what you can do to prevent it."
+    },
+    {
+      "id": "session-1287622",
+      "type": "lightning",
+      "track": "Cloud Corner",
+      "time": "13:00 - 13:15",
+      "room": "Cloud Corner (Boulevard 2)",
+      "title": "Three AWS Myths That Are Costing You",
+      "speakers": [
+        {
+          "name": "Michael Walmsley",
+          "eventHeadline": "AWS Solution Architect (Serverless Specialist) at Accenture"
+        }
+      ],
+      "description": "Bad advice has a long half-life. A forum post from 2017, a Stack Overflow answer that was correct once, a default setting nobody questioned — and suddenly your architecture is built around a problem that no longer exists. In this lightning talk we bust three persistent AWS myths that developers still get wrong in 2026. Each one is widely believed, demonstrably wrong, and fixable in an afternoon. Walk away with three things to check in your stack this week."
+    },
+    {
+      "id": "session-1307982",
+      "type": "session",
+      "track": "Builder Lounge",
+      "time": "13:00 - 14:30",
+      "room": "Builder Lounge (Boulevard 3)",
+      "title": "Ship with Agents: A Hands-On Workshop Using CLI Agent Orchestration",
+      "speakers": [
+        {
+          "name": "Stan Fan",
+          "eventHeadline": "ISV Solution Architect"
+        },
+        {
+          "name": "Haofei Feng",
+          "eventHeadline": "AWS, Senior Cloud Architect"
+        },
+        {
+          "name": "Augusto Dias",
+          "eventHeadline": "AWS, Delivery Consultant"
+        }
+      ],
+      "description": "Forget chatbots — in this workshop you'll use AI agents that plan, code, test, and ship autonomously from your terminal. Using cli-agent-orchestrator (CAO), an open-source multi-agent runtime, you'll build a real application by orchestrating a team of agents: one to scaffold infrastructure, one to write code, one to review it, and a coordinator to keep them on track. You'll learn to define workflows, give agents persistent memory and skills, wire them to AWS services via MCP tools, and run the whole thing hands-free with scheduled automation. Walk out with a deployed app you barely typed — and the patterns to do it again on Monday."
+    },
+    {
+      "id": "session-1334895",
+      "type": "lightning",
+      "track": "Cloud Corner",
+      "time": "13:15 - 13:30",
+      "room": "Cloud Corner (Boulevard 2)",
+      "title": "Beyond Chatbots: Building VIVA, a Real-Time Avatar Agent on AWS",
+      "speakers": [
+        {
+          "name": "Vanitha Kaliyaperumal",
+          "eventHeadline": "Versent, Lead Engineer"
+        }
+      ],
+      "description": "Most AI agents still live in chat windows or as disembodied voices. At Versent, we wanted to explore what happens when an agent has a face, a voice and the ability to respond in real time. In this session, we’ll introduce VIVA - Versent’s Intelligent Visual Agent: a browser-based avatar agent built on AWS that can hold a natural voice conversation with lip-synced visual responses. We’ll share the architecture and design decisions behind the experience, including how we approached real-time interaction, voice-to-avatar synchronisation, latency, and making the agent feel more natural than robotic. Attendees will walk away with practical lessons from building a multimodal AI experience on AWS - what worked, what was challenging and what we learned about designing the next generation of conversational agents."
+    },
+    {
+      "id": "session-1309482",
+      "type": "session",
+      "track": "The Edge Zone",
+      "time": "13:30 - 14:00",
+      "room": "The Edge Zone (Boulevard 1)",
+      "title": "Data Observability Without the Pain: 3 Practical Patterns from a Production IoT Platform",
+      "speakers": [
+        {
+          "name": "Matthew Gillard",
+          "eventHeadline": "Principal, V2"
+        }
+      ],
+      "description": "Modern IoT platforms are inherently data platforms. Events flow through APIs, queues, AWS Lambda Serverless functions, storage systems, and device networks before becoming meaningful data. When something goes wrong, tracing a single event across these distributed components quickly becomes painful—and the question shifts from _“what happened?”_ to _“where do I even start looking?”_ I’ll walk through three practical observability patterns drawn from building and operating a production, event-driven IoT healthcare platform on AWS that processes tens of thousands of device events daily. Using OpenTelemetry, Amazon Cloudwatch and Honeycomb, we’ll explore techniques for gaining visibility into asynchronous event pipelines, correlating activity across services, and tracing events as they move through distributed systems. Through real troubleshooting examples from production, you’ll see how improved observability makes it dramatically easier to diagnose issues, understand system behaviour, and operate complex event-driven systems with confidence. You’ll leave with three concrete patterns you can apply immediately to your own event-driven data systems."
+    },
+    {
+      "id": "session-edf30898-8606-4761-a903-07d994b107f8",
+      "type": "break",
+      "track": "Cloud Corner",
+      "time": "13:30 - 13:45",
+      "room": "Cloud Corner (Boulevard 2)",
+      "title": "Running and Managing AI Agents Securely at Scale with WSO2 Agent Manager and EKS",
+      "speakers": [],
+      "description": "Unlock the full potential of autonomous AI by combining the governance capabilities of WSO2 Agent Manager with the scalable power of Amazon EKS. This guide breaks down the architectural blueprint for deploying, monitoring, and securing enterprise AI agents in a cloud-native environment without compromising on performance or compliance. Key Takeaways • Scalable Orchestration with EKS: Learn how to leverage Amazon Elastic Kubernetes Service to dynamically scale AI agent workloads, ensuring high availability and fault tolerance across your infrastructure. Enterprise-Grade Governance: • Discover how WSO2 Agent Manager provides critical oversight--including identity management, rate limiting, and audit logging to keep autonomous agents secure and compliant. Seamless API Integration: • Understand best practices for safely connecting your AI agents to sensitive internal data stores and external APIs, turning intelligent models into actionable, secure enterprise tools."
+    },
+    {
+      "id": "session-1335977",
+      "type": "lightning",
+      "track": "Cloud Corner",
+      "time": "13:45 - 14:00",
+      "room": "Cloud Corner (Boulevard 2)",
+      "title": "Data is being generated everywhere, build a bridge and get over it.",
+      "speakers": [
+        {
+          "name": "James Corrigan",
+          "eventHeadline": "Qumulo - Principal Solutions Architect"
+        }
+      ],
+      "description": "Most of the world's data is unstructured, created at the edge, needed everywhere else. Copying it around doesn't scale, and latency is physics. This session covers how global-scale file systems solve that: one global namespace, caches you can predict, and custom or AI-generated metadata that makes storage something you can query."
+    },
+    {
+      "id": "session-1310116",
+      "type": "lightning",
+      "track": "The Edge Zone",
+      "time": "14:00 - 14:15",
+      "room": "The Edge Zone (Boulevard 1)",
+      "title": "Document DynamoDB Access Patterns, and Workflows with DNML",
+      "speakers": [
+        {
+          "name": "Orlando Adeyemi",
+          "eventHeadline": "Founder at Dynomate"
+        }
+      ],
+      "description": "Event-driven architectures are now widely used to build scalable, decoupled, and responsive systems. In my work, I’ve seen this success create a quieter problem: hundreds of DynamoDB tables spread across teams and repositories, with critical access patterns documented inconsistently—or known only by the engineers who built them. In this talk, I’ll examine why conventional documentation struggles to keep pace with these systems and introduce DNML as a different way to make DynamoDB designs and their surrounding workflows portable, discoverable, and useful to both engineers and AI agents. I’ll give attendees a repeatable approach for mapping their DynamoDB estate, capturing access patterns, relationships, and workflows, and creating documentation that engineers and AI agents can use to reason about and run systems consistently across environments."
+    },
+    {
+      "id": "session-1295371",
+      "type": "session",
+      "track": "Cloud Corner",
+      "time": "14:00 - 14:30",
+      "room": "Cloud Corner (Boulevard 2)",
+      "title": "“A Kubestronaut Riding a Dragon”: Scaling Generative AI on EKS",
+      "speakers": [
+        {
+          "name": "Yongkang He",
+          "eventHeadline": "Founder @KSUG.AI @KubeSmart.AI | Creator @awstronaut @kubestrong"
+        }
+      ],
+      "description": "Generative AI is quickly becoming a production workload, but running models like Stable Diffusion XL on EKS introduces challenges around GPUs, scheduling, and performance. In this session, we present a real-world implementation of an AI image generation platform running on Kubernetes. You’ll learn how to containerize, deploy, and scale inference workloads using open-source tools like Diffusers, PyTorch, and Streamlit. We’ll explore GPU vs CPU performance, model loading behavior (~8GB), and cold start impacts, along with how Kubernetes distributes and scales inference workloads. The talk includes a live demo generating images in real time (including “a kubestronaut riding a dragon in space”) and shares practical insights for running generative AI workloads on Kubernetes in any environment."
+    },
+    {
+      "id": "session-ebb7b599-e911-4091-8647-b5a9a513115a",
+      "type": "break",
+      "track": "",
+      "time": "14:30 - 15:00",
+      "room": "Builder’s Mainstage (Auditorium)",
+      "title": "Afternoon Tea",
+      "speakers": [],
+      "description": ""
+    },
+    {
+      "id": "session-1281921",
+      "type": "session",
+      "track": "Cloud Corner",
+      "time": "15:00 - 15:30",
+      "room": "Cloud Corner (Boulevard 2)",
+      "title": "Securing Serverless Enterprises Against Agentic AI Threats",
+      "speakers": [
+        {
+          "name": "Daniel Clement",
+          "eventHeadline": "Solution Architect | AWS Community Builder"
+        }
+      ],
+      "description": "As enterprises rapidly adopt serverless computing and integrate agentic artificial intelligence (AI) into their cloud-native systems, new dimensions of risk emerge. This session explores the complex interplay between AI technologies and serverless architectures, examining how AI both strengthens and undermines security in these environments. Through case studies, vulnerability analysis, and proposed mitigation frameworks, identify specific AI-induced threats to serverless systems, evaluate current defense mechanisms, and propose practical strategies for securing enterprise deployments."
+    },
+    {
+      "id": "session-1cbc7662-2407-420d-81dc-322dffb8196e",
+      "type": "break",
+      "track": "Builder Lounge",
+      "time": "15:00 - 16:00",
+      "room": "Builder Lounge (Boulevard 3)",
+      "title": "Ask me Anything sessions",
+      "speakers": [],
+      "description": ""
+    },
+    {
+      "id": "session-1310025",
+      "type": "session",
+      "track": "The Edge Zone",
+      "time": "15:30 - 16:00",
+      "room": "The Edge Zone (Boulevard 1)",
+      "title": "Mastering Custom Node Pools in EKS Auto Mode",
+      "speakers": [
+        {
+          "name": "Arshad Zackeriya",
+          "eventHeadline": "AWS Hero"
+        }
+      ],
+      "description": "EKS Auto Mode simplifies cluster management, but one size does not fit all. When your applications require specific hardware, strict security controls, or unique networking, the default configuration is often not enough. In this talk, we will break down the gap between managed convenience and the custom requirements of real world production workloads. You will learn the practical differences between NodePools and NodeClasses and discover how to design them for your specific needs. We will show you how to keep the benefits of a managed service while taking full control of your infrastructure. Join this session to gain the confidence to build stable, efficient, and custom Kubernetes environments."
+    },
+    {
+      "id": "session-1270161",
+      "type": "session",
+      "track": "The Edge Zone",
+      "time": "16:00 - 16:30",
+      "room": "The Edge Zone (Boulevard 1)",
+      "title": "AI Agents Flooded Our PRs. Here's the Harness That Fixed It.",
+      "speakers": [
+        {
+          "name": "Geethika Guruge",
+          "eventHeadline": "Principal Consultant, Mantel Group"
+        }
+      ],
+      "description": "We built an SDLC agent workforce, and the code came faster than we could review it. To solve that, we built a PR agent at the gate: acts on GitHub, comments on PRs, and can block a merge on real failure. The harness demanded real engineering covering idempotency, session continuity, and token economy. The build-vs-buy came down to context richness: design intent, Jira history, cross-repo knowledge that doesn't scale when hand-rolled. The Amazon Bedrock AgentCore ecosystem was the answer. You'll leave with the architectural decisions, including where we went wrong and how we recovered."
+    },
+    {
+      "id": "session-1268603",
+      "type": "session",
+      "track": "Cloud Corner",
+      "time": "16:00 - 16:30",
+      "room": "Cloud Corner (Boulevard 2)",
+      "title": "The Day We Stopped Paying For Telemetry Noise",
+      "speakers": [
+        {
+          "name": "Yuba Raj Panta",
+          "eventHeadline": "Senior SRE/DevOps Engineer @ PageUp | Google Developer Expert | AWS Community Builder"
+        }
+      ],
+      "description": "Telemetry costs grow exponentially at enterprise scale — and the usual fix, aggressive sampling, risks dropping the errors you actually need to see. At PageUp, we needed a way to cut the noise without losing a single anomalous trace. This session covers how we used Transit Gateway to fan in traffic across regional VPCs, ECS to run a scalable sampling layer, and Redis to coordinate sampling decisions without bottlenecks — together forming a centralised hub-and-spoke architecture for trace-aware sampling at enterprise scale. You'll leave with a practical AWS blueprint for centralising high-volume, multi-region data — plus the strategy that cut our telemetry volume by 75% while keeping 100% of critical errors. Key takeaways: - Hub-and-spoke architecture across VPCs/regions with Transit Gateway - ECS service design & autoscaling for a high-throughput proxy layer - Distributed coordination with Redis — patterns and failure pitfalls - The payoff: 75% volume reduction, 100% critical error retention"
+    },
+    {
+      "id": "session-2753f7d7-f611-4a2a-85e7-8f51dea90832",
+      "type": "break",
+      "track": "Builder Lounge",
+      "time": "16:00 - 17:00",
+      "room": "Builder Lounge (Boulevard 3)",
+      "title": "Trivia / Builder Cards / Networking",
+      "speakers": [],
+      "description": ""
+    },
+    {
+      "id": "session-1308190",
+      "type": "session",
+      "track": "The Edge Zone",
+      "time": "16:30 - 17:00",
+      "room": "The Edge Zone (Boulevard 1)",
+      "title": "One Guardrail, Any Model: Securing an AI-Developed Student Platform with Amazon Bedrock",
+      "speakers": [
+        {
+          "name": "Jahnavi Gurrappadia",
+          "eventHeadline": "Security becomes powerful when embedded from the very beginning"
+        }
+      ],
+      "description": "AI now writes a lot of our code and powers a lot of our features often in the same app, shipped faster than security review can keep up. EduReach is exactly that story: an AI-assisted, rapidly built platform that connects students and teachers, with an LLM answering student questions in real time. It serves minors, handles personal data, and like most AI apps today runs its model outside of AWS. This talk is a practical walkthrough of how we put AWS-native security guardrails around that app without rebuilding it. I'll show how Amazon Bedrock Guardrails can wrap any model including third-party LLMs via the ApplyGuardrail API, and how a layered guardrail policy (content filters, denied topics, prompt-injection and jailbreak defense, PII detection and redaction, and contextual grounding against hallucinations) maps directly to the risks of an app used by students. We'll go beyond the model too: IAM least privilege, Cognito auth, WAF, Secrets Manager, and CloudTrail/CloudWatch for audit the defense-in-depth an AI feature alone doesn't give you. You'll leave with a reference pattern and a checklist you can apply to your own AI app, whether your model lives in Bedrock or not."
+    },
+    {
+      "id": "session-1274350",
+      "type": "session",
+      "track": "Cloud Corner",
+      "time": "16:30 - 17:00",
+      "room": "Cloud Corner (Boulevard 2)",
+      "title": "Real-Time on AWS: What I Learned the Hard Way with Kinesis & Flink",
+      "speakers": [
+        {
+          "name": "Aashish Jolly",
+          "eventHeadline": "Principal Solutions Architect @ Versent"
+        }
+      ],
+      "description": "Real-time data engineering looks simple in a reference diagram and gets hard the moment streaming data is late, out of order, or arriving faster than you can process it. In this session, I share lessons from building a real-time anomaly detection pipeline on AWS using Kinesis for ingest, Managed Service for Apache Flink for stateful processing, and EventBridge for alerting. I'll walk through what actually went wrong: latency budgets, windowing, late-arriving events, and the speed-versus-accuracy tradeoff. You'll leave with a reference architecture and the gotchas to avoid on your own builds."
+    },
+    {
+      "id": "session-69d95b42-62f1-4e6a-a0c5-8526195fb9a8",
+      "type": "keynote",
+      "track": "Builder’s Mainstage",
+      "time": "17:00 - 17:30",
+      "room": "Builder’s Mainstage (Auditorium)",
+      "title": "Locknote",
+      "speakers": [],
+      "description": ""
+    }
+  ]
+}

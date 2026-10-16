@@ -1,0 +1,136 @@
+{
+  "source": "https://awscommunitydayaus.com/speakers/index.html",
+  "retrievedAt": "2026-10-16T06:23:26.129923+00:00",
+  "speakers": [
+    {
+      "name": "Aashish Jolly",
+      "title": "Principal Solutions Architect @ Versent",
+      "bio": "Aashish Jolly is a Principal AWS Solutions Architect at Versent, where he architects and secures cloud workloads for Australian enterprises. Twenty years in, he's worked through landing zones, VDI, Kubernetes and hybrid estates, and now spends most of his time on agentic AI on Bedrock and AgentCore, writing Terraform and Python, not just the diagrams. He has a particular interest in the failure modes that don't appear in the documentation, which is roughly how this talk came about."
+    },
+    {
+      "name": "Akshat Gupta",
+      "title": "Cloud and AI Engineer | PwC Australia",
+      "bio": "Akshat is a Cloud and AI Engineer in the Engineering business with a focus in AI, Full stack development and Cloud Engineering. He has an experience of 6+ Years in the tech industry with a wide variety of experience in technologies ranging from AWS, GCP and Azure His experience ranges in different sectors including but not limited to, Government, Insurance, Retail, and Healthcare."
+    },
+    {
+      "name": "Arshad Zackeriya",
+      "title": "AWS Hero",
+      "bio": "Arshad Zackeriya, a Senior Engineer at Xero, specializes in empowering organizations to deliver software at high velocity through best DevOps practices. He is well-known in the community as Zack, and his expertise primarily centers around Amazon EKS and Developer Tools. Zack is a tech enthusiast who passionately engages with communities to both learn and share knowledge. His experience includes delivering multiple talks at various AWS Summits in ASEAN and Sydney, AWS Meetups, and AWS Community Days. Additionally, he held the position of AWS Community Builder for five consecutive years, earning recognition as Nominated for the APJ Community Builder of the Year for 2022 and 2023. Zack serves as the Wellington Lead and Co-Organizer for the AWS User Group Aotearoa (New Zealand). Zack is the host of two podcasts: DevOps with Zack, where he converses with industry guest speakers about DevOps principles and various AWS tools and services, and The Zacs' Show Talking AWS, which centers on DevOps and Serverless practices. In this podcast, he partners with another Zach, whom he met through the AWS Community Builder program."
+    },
+    {
+      "name": "Augusto Dias",
+      "title": "AWS, Delivery Consultant",
+      "bio": "I am an AWS Consultant with 20 years experience in the Software industry, specialized in Data Engineering and more recently Agentic workflows. I believe collaboration is the best way to achieve great results and being up-to-date with the latest technologies."
+    },
+    {
+      "name": "Cathy Weng",
+      "title": "Senior Cloud Consultant at Mantel",
+      "bio": "A senior cloud engineer with a background in atmospheric sciences, Cathy brings her curiosity from studying clouds above our heads to building things in AWS. She blends a love for tech, art, nature and human connection—currently leading the Women in Cloud community. She’s also a regular at tech meetups and conferences—so chances are, you’ll bump into her at one!"
+    },
+    {
+      "name": "Christina Chen",
+      "title": "Senior Cloud Consultant at Mantel",
+      "bio": "Christina Chen is a Senior Cloud Consultant at Mantel Group, specialising in AWS, Kubernetes, platform engineering and AI infrastructure. She is an AWS Community Builder, AWS Golden Jacket recipient, and AWS All Builders Welcome (ABW) re:Invent 2025 Grant recipient. Christina regularly shares practical lessons from designing and building cloud platforms through technical blogs and community talks. A former intensive care nurse, she brings a unique perspective to engineering, with a strong focus on reliability, security and solving real-world problems. She is passionate about making complex cloud technologies accessible by sharing practical knowledge and real-world experiences."
+    },
+    {
+      "name": "Daniel Clement",
+      "title": "Solution Architect | AWS Community Builder",
+      "bio": "Cloud solution engineer with experience in AWS meticulously developing robust applications and architectures. I have a strong interest in developing scalable and highly secure serverless technologies. I design and develop systems that meet standards in their ability for continuous delivery and meet compliance."
+    },
+    {
+      "name": "Dmytro Sirant",
+      "title": "AWS Community Builder, AWS User Group Leader, Founder of Perun Engineering",
+      "bio": "Dmytro Sirant is a Fractional CTO, Principal DevOps Engineer, and AWS Solutions Architect with 15+ years of experience in system administration and networking. As an AWS Community Builder and leader of the AWS User Group Gold Coast, Dmytro holds 15 AWS certifications (Golden Jacket status). He specialises in implementing DevOps practices for highly regulated environments, with extensive experience in PCI DSS, HIPAA, SOC2, and ISO 27001 compliance frameworks. Through his company, Perun Engineering, and various leadership roles, Dmytro has successfully led large-scale infrastructure migrations, Kubernetes implementations, and security compliance initiatives. His holistic approach prioritises sustainable, long-term solutions over quick fixes, building cohesive teams aligned toward shared goals while staying hands-on with cutting-edge technologies."
+    },
+    {
+      "name": "Geethika Guruge",
+      "title": "Principal Consultant, Mantel Group",
+      "bio": "Geethika is an AWS Ambassador and a Community Builder, highly experienced Solutions Architect and a Principal Consultant for Mantel Group. When he's not busy helping organisations migrate and adopt cloud native solutions, he is also a very active supporter of local communities and meetups."
+    },
+    {
+      "name": "Haofei Feng",
+      "title": "AWS, Senior Cloud Architect",
+      "bio": "Haofei is an innovative strategic technology leader with 20 years’ experience delivering impactful consulting, architecture, and managed services across the full project lifecycle, from strategic advisory to hands-on execution and operational excellence. Renowned for aligning business objectives with advanced cloud, data, and AI solutions across regulated and complex industries. Recognized for authoring and presenting strategic whitepapers to enable sustainable business transformation"
+    },
+    {
+      "name": "Jahnavi Gurrappadia",
+      "title": "Security becomes powerful when embedded from the very beginning",
+      "bio": "Jahnavi Gurrappadia is a Cyber Security Specialist and AI & Security professional whose work spans data loss prevention, MFA and identity rollouts, attack surface management, and GRC across cloud and web environments. Certified in ISO 27001, threat intelligence, SOC analysis, and Generative AI, she was featured in Women in Security Magazine (Jan 2025) for her work on modern security practice. She brings that same conviction that security becomes powerful when it's embedded from the very beginning to hardening AI-powered applications."
+    },
+    {
+      "name": "James Corrigan",
+      "title": "Qumulo - Principal Solutions Architect",
+      "bio": "James Corrigan is a Principal Solutions Architect at Qumulo, focused on Media & Entertainment. Auckland based with 18 years in the industry, including 5 years at AWS, he specialises in profiling media workloads and building high performance storage across on-prem and cloud."
+    },
+    {
+      "name": "John Crook",
+      "title": "CEO Rule30",
+      "bio": "John Crook is CEO of Rule30, an AI education and advisory firm in Brisbane. He's been working with AI for 4 decades, long before it was a buzzword. He started his career in the 1980s as a software engineer at British Telecom. Later at Intel Corporation in Austin, he was invited to join the Intel Patents Board, and was granted 3 US patents. In the 2000s, as a Constellation Software executive, he acquired and ran software businesses in Canada, the USA, and Australia/NZ. From 2019 onwards he started training hundreds of Constellation's leaders on AI strategy, preparing them for a shift most hadn't seen coming. He now helps leaders cut through the hype and understand what this technology shift actually means."
+    },
+    {
+      "name": "Lovee Jain",
+      "title": "Senior Software Engineer, AWS Community Builder, Google Developer Expert, WTM Ambassador, GDG Melbourne Organiser",
+      "bio": "Lovee Jain is a Senior Software Engineer, AWS Community Builder, and Google Developer Expert (GCP). She designs and builds scalable systems in the B2B2C and white-labelling space, working across APIs, cloud infrastructure, and solution architecture. She is particularly interested in how intelligent agents and AI-driven systems can augment modern software design and developer workflows. Beyond engineering, she serves as a GDG Melbourne Organiser and Women Techmakers Ambassador, championing community-driven learning and inclusive tech ecosystems."
+    },
+    {
+      "name": "Matthew Gillard",
+      "title": "Principal, V2",
+      "bio": "Matthew is the CTO of CuidadoConnect, an innovative aged care startup, and a Principal at V2.AI in Melbourne, Australia. He also co-hosts the Cloud Dialogues podcast and co-runs the Melbourne Serverless meetup. Focused on platform abstractions like Serverless, Matthew helps accelerate business outcomes and empower developers to embrace new ways of working that boost delivery velocity."
+    },
+    {
+      "name": "Michael Walmsley",
+      "title": "AWS Solution Architect (Serverless Specialist) at Accenture",
+      "bio": "Michael works in the Data and AI Practice at Accenture in Melbourne, Australia. He has been disrupting Enterprise thinking since 2019, focusing on AWS Serverless and Event Driven Architectures. He has built API and data integrations across various business landscapes - from the Australian Open Digital experience to Complex Enterprise Business Transformation Programs. He loves serverless and is an AWS Serverless Heroand creator of the molecular community blogging site www.serverlessdna.com. He is passionate about Well Architected Frameworks and contributes to the AWS Lambda Powertools open source project, which he feels is essential for creating reliable AWS Lambda services."
+    },
+    {
+      "name": "Mike Chambers",
+      "title": "Senior AI Specialist DA, @ Amazon | Ex ML Hero | Generative AI, Cloud Computing",
+      "bio": "As a Specialist Developer Advocate for Machine Learning at Amazon Web Services (AWS) since 2022, I focus on empowering developers to leverage generative AI and cloud computing for building innovative solutions. My role involves facilitating collaboration, sharing knowledge, and supporting the development of impactful applications through AWS technologies. With over 3.5 years at AWS and 8 years of additional training experience, I am committed to advancing the adoption of machine learning and cloud solutions. Recognized as an AWS Machine Learning Hero in 2020, I contribute to the global tech community by fostering education, conducting training, and promoting best practices in generative AI and solution architecture."
+    },
+    {
+      "name": "Muhammad Yuga Nugraha",
+      "title": "Agoda, Senior Security Engineer - Cloud security for what matters most",
+      "bio": "Muhammad Yuga Nugraha is a Senior Security Engineer specializing in cloud and cloud-native security. Beyond his day job, he actively contributes to the tech community as a speaker at events including PyCon APAC 2024, PyCon SG 2025, AWS Community Day Indonesia 2024 & 2025, OpenInfra ID 2025, KCD Indonesia 2024, Cloud Village @ DEFCON 33, BSides Tokyo 2026, and more."
+    },
+    {
+      "name": "Nicole Ramirez",
+      "title": "Lead Machine Learning Engineer at Mantel",
+      "bio": "Nicole is a Lead Machine Learning Engineer consultant at Mantel Group, where she aims to design and build AI solutions that deliver tangible value. With her career evenly split between hands-on machine learning development and AI leadership roles as across Australia and New Zealand, she brings a well-rounded perspective to AI challenges. Nicole is currently fascinated by the emerging world of AI agents and is excited to approach sharing her knowledge about agents through first principles where possible."
+    },
+    {
+      "name": "Orlando Adeyemi",
+      "title": "Founder at Dynomate",
+      "bio": "Cloud engineer with 10 Years Of Hands-On Experience With AWS, Founder of Dynomate."
+    },
+    {
+      "name": "Sagar Utekar",
+      "title": "SRE@Omnissa | Kubestronaut | CNCF Ambassador | Docker Captain",
+      "bio": "Open Source Enthusiastic CNCF Ambassador Kubestronaut CNCG Pune Community Leader KCD Pune Organiser"
+    },
+    {
+      "name": "Stan Fan",
+      "title": "ISV Solution Architect",
+      "bio": "Stan is a Solutions Architect at AWS who builds agentic AI systems in the open. He maintains cli-agent-orchestrator (CAO), an open-source multi-agent runtime, and has delivered hands-on serverless and AI workshops for customers across APJ. He spends his days helping teams ship faster with agents and his nights making the agents ship faster themselves. Based in Sydney."
+    },
+    {
+      "name": "Tim Wang",
+      "title": "Cloud Solution Architect | AWS Ambassador | PwC Australia",
+      "bio": "Tim is an experienced cloud solution architect who's passionate about modern and emerging technologies and its impact across industries. Tim has extensive experience in implementing cloud platforms, DevSecOps/AppSec and end-to-end solutions. He carries detailed knowledge and hands-on experience from many years of solution delivery including a PwC owned continuous compliance solution. Tim has also involved as security engineering SME and architect working on large enterprise project in the banking and public sectors to guide clients on their security maturity journey."
+    },
+    {
+      "name": "Vanitha Kaliyaperumal",
+      "title": "Versent, Lead Engineer",
+      "bio": "With 24 years of experience delivering mission-critical infrastructure across Telecommunications, Resources, Banking, and Software industries — Vanitha brings deep expertise in cloud architecture, AI engineering, and complex technology transformation. From cloud migration and microservices modernisation to building cutting-edge Voice AI solutions, she has worked across the full spectrum of intelligent, high-performance systems. A passionate community advocate, she mentored women in STEM through Tech Girls are Superheroes, AWS She Builds, Telstra Purple and Versent Robogals Women Mentorship and inspiring the next generation of technologists."
+    },
+    {
+      "name": "Yongkang He",
+      "title": "Founder @KSUG.AI @KubeSmart.AI | Creator @awstronaut @kubestrong",
+      "bio": "Yongkang He is a Google Developer Expert (GDE), CNCF Kubestronaut, AWS Community Builder, Microsoft MVP, and Alibaba MVP with over 20 years of experience in the IT industry. Based in Singapore, he specializes in Kubernetes, cloud-native technologies, and multi-cloud solutions. Widely recognized as one of the most certified professionals in the Kubernetes and cloud ecosystem, Yongkang is passionate about open source, community-driven learning, and making the cloud-native journey more affordable by sharing the latest resources, certifications, and event discounts. https://linktr.ee/ksug.ai He actively contributes automation tools and hands-on learning content to help developers and engineers upskill faster. Check out his projects on GitHub. https://github.com/ksug-ai"
+    },
+    {
+      "name": "Yuba Raj Panta",
+      "title": "Senior SRE/DevOps Engineer @ PageUp | Google Developer Expert | AWS Community Builder",
+      "bio": "I'm UV (or Yuba), a Senior DevOps/SRE Engineer on the Platform team at PageUp, currently obsessed with building the paved paths that let teams ship fast without tripping over security or reliability. Most of my days are spent somewhere between pipelines, guardrails, and the increasingly interesting question of what it actually takes to put AI into production without it becoming the next incident review. Outside the day job I organise GDG Melbourne, build with the AWS Community Builders, and lead a few other community efforts around the city. I'm always one beer away from arguing that volunteering at a meetup will change someone's career, partly because I've watched it happen to a hundred people, and partly because it happened to me. Melbourne-based, perpetually caffeinated, and happiest when a hard problem gets a little easier for the next engineer who hits it."
+    }
+  ]
+}
